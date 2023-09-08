@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>high pass</title>
+    <link rel="icon" href="images/favicon.svg" type="image/svg">
+    <link rel="stylesheet" href="css/style.min.css">
+    <script defer src="https://unpkg.com/just-validate@latest/dist/just-validate.production.min.js"></script>
+    <script defer src="https://api-maps.yandex.ru/2.1/?apikey=ваш API-ключ&lang=ru_RU" type="text/javascript"></script>
+    <script defer src="js_min/main.min.js"></script>
+
+
+
+
+</head>
+
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header__inner">
+                <a href="" class="header__logo">
+                    <img class="header__logo1" src="images/Logo.png" alt="">
+                </a>
+                <div class="header__right">
+
+                    <nav class="header__nav">
+                        <button class="header__nav-closed"><svg width="20" height="20" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="10" cy="10" r="10" fill="#999" />
+                                <path fill="#fff" d="M6.207 5.5l8.485 8.485-.707.707L5.5 6.207z" />
+                                <path fill="#fff" d="M5.59 13.985L14.077 5.5l.707.707-8.485 8.486z" /></svg></button>
+                        <ul class="header__nav-list">
+                            <li class="header__nav-item">
+                                <a href="#studio" class="header__nav-link">О&nbsp;студии</a>
+                            </li>
+                            <li class="header__nav-item">
+                                <a href="#project" class="header__nav-link">Наши проекты</a>
+                            </li>
+                            <li class="header__nav-item">
+                                <a href="#" class="header__nav-link">Услуги</a>
+                            </li>
+                            <li class="header__nav-item">
+                                <a href="#master" class="header__nav-link">Мастер-классы</a>
+                            </li>
+                            <li class="header__nav-item">
+                                <a href="#contacts" class="header__nav-link">Контакты</a>
+                            </li>
+                        </ul>
+                        <a class=" tel" href="tel:+749542423532"><svg width="18" height="18" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M16.343 12.098a10.49 10.49 0 01-3.236-.513.896.896 0 00-.926.22l-1.44 1.806c-2.593-1.238-5.023-3.575-6.315-6.261l1.787-1.522a.935.935 0 00.22-.935 10.223 10.223 0 01-.513-3.236.916.916 0 00-.907-.907H1.84C1.346.75.75.97.75 1.657c0 8.516 7.086 15.593 15.593 15.593.65 0 .907-.578.907-1.082v-3.162a.916.916 0 00-.907-.908z"
+                                    fill="#FF6E30" /></svg><span>+7 495 424-23-532</span></a>
+
+                    </nav>
+
+                    <div class="search flex">
+                        <form class="search__form" action="#">
+                            <span class="container__visually">Что будем искать?</span>
+                            <input class="search__input" type="text" name="search" placeholder="Что будем искать?">
+                            <button class="header__btn" aria-label="Найти">
+                                <svg width="25" height="25" viewBox="0 0 25 25" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M24.9113 22.8136L19.8536 18.3573C21.341 16.3763 22.1457 13.9543 22.1457 11.4068C22.1457 8.35737 20.9904 5.49807 18.9013 3.34219C16.8123 1.18631 14.0293 0 11.0728 0C8.11639 0 5.33342 1.19011 3.24434 3.34219C1.15157 5.49427 0 8.35737 0 11.4068C0 14.4524 1.15527 17.3193 3.24434 19.4714C5.33342 21.6273 8.1127 22.8136 11.0728 22.8136C13.5458 22.8136 15.8932 21.9847 17.8162 20.4562L22.8739 24.9086C22.902 24.9376 22.9354 24.9606 22.9721 24.9762C23.0088 24.9919 23.0482 25 23.088 25C23.1277 25 23.1671 24.9919 23.2038 24.9762C23.2406 24.9606 23.2739 24.9376 23.302 24.9086L24.9113 23.2546C24.9394 23.2257 24.9617 23.1913 24.9769 23.1535C24.9922 23.1156 25 23.0751 25 23.0341C25 22.9931 24.9922 22.9526 24.9769 22.9147C24.9617 22.8769 24.9394 22.8425 24.9113 22.8136ZM16.9193 17.4296C15.3543 19.0379 13.28 19.9238 11.0728 19.9238C8.86565 19.9238 6.79134 19.0379 5.22638 17.4296C3.66511 15.8174 2.80512 13.6805 2.80512 11.4068C2.80512 9.13303 3.66511 6.99236 5.22638 5.384C6.79134 3.77565 8.86565 2.88972 11.0728 2.88972C13.28 2.88972 15.358 3.77184 16.9193 5.384C18.4806 6.99616 19.3406 9.13303 19.3406 11.4068C19.3406 13.6805 18.4806 15.8212 16.9193 17.4296Z"
+                                        fill="white" />
+                                </svg>
+
+                            </button>
+                            <button class="search__input-closed" aria-label="закрыть">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <rect x="8.9541" y="7.30432" width="11.6645" height="2.33291"
+                                        transform="rotate(45 8.9541 7.30432)" fill="#CACACA" />
+                                    <rect x="7.30469" y="15.5524" width="11.6645" height="2.33291"
+                                        transform="rotate(-45 7.30469 15.5524)" fill="#CACACA" />
+                                    <circle cx="12" cy="12" r="11" stroke="#CACACA" stroke-width="2" />
+                                </svg>
+
+                            </button>
+                        </form>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="header__burger">
+            <button class="header__burger-svg"><svg width="20" height="18" viewBox="0 0 20 18" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <rect width="20" height="2" fill="white" />
+                    <rect y="8" width="20" height="2" fill="white" />
+                    <rect y="16" width="10" height="2" fill="white" />
+                </svg>
+            </button>
+        </div>
+
+    </header>
+    <main class="main">
+        <section id="work" class="work">
+            <div class="container grid">
+                <div class="work__photo">
+                    <picture class="work__img">
+                        <source srcset="images/work1(320).avif" media="(max-width: 767px )" type="image/avif">
+                        <source srcset="images/work1(320).webp" media="(max-width: 767px )" type="image/webp">
+                        <source srcset="images/work1(320).jpg" media="(max-width: 767px )" type="image/jpg">
+                        <source srcset="images/work1(768).avif" media="(max-width: 1023px )" type="image/avif">
+                        <source srcset="images/work1(768).webp" media="(max-width: 1023px )" type="image/webp">
+                        <source srcset="images/work1(768).jpg" media="(max-width: 1023px )" type="image/jpg">
+                        <source srcset="images/work1(1024).avif" media="(max-width: 1430px )" type="image/avif">
+                        <source srcset="images/work1(1024).webp" media="(max-width: 1430px )" type="image/webp">
+                        <source srcset="images/work1(1024).jpg" media="(max-width: 1430px )" type="image/jpg">
+                        <source srcset="images/work1.avif" media="(max-width: 3000px )" type="image/avif">
+                        <source srcset="images/work1.webp" media="(max-width: 3000px )" type="image/webp">
+                        <img class="work__img" src="images/work1.jpg" alt="photo 1">
+                    </picture>
+                    <div class="work__content">
+                        <h2 class="work__content-descr">Мастер-класс от&nbsp;Игоря Робова</h2>
+                        <h1 class="work__content-title">Неоновый фотосет 2.0 7&nbsp;июля 20:00</h1>
+                        <button class="work__content-button">Узнать больше</button>
+                    </div>
+                    <button class="work__master">
+                        #мастеркласс
+                    </button>
+                </div>
+                <div class="work__photo-wright">
+                    <h2 class="work__title">
+                        Работы участников предыдущего мастер-класса
+                    </h2>
+                    <ul class="work__list">
+                        <li class="work__list-item">
+
+                            <picture class="img">
+                                <source srcset="images/work2(320).avif" media="(max-width: 767px )" type="image/avif">
+                                <source srcset="images/work2(320).webp" media="(max-width: 767px )" type="image/webp">
+                                <source srcset="images/work2(320).jpg" media="(max-width: 767px )" type="image/jpg">
+                                <source srcset="images/work2(768).avif" media="(max-width: 1023px )" type="image/avif">
+                                <source srcset="images/work2(768).webp" media="(max-width: 1023px )" type="image/webp">
+                                <source srcset="images/work2(768).jpg" media="(max-width: 1023px )" type="image/jpg">
+                                <source srcset="images/work2(1024).avif" media="(max-width: 1430px )" type="image/avif">
+                                <source srcset="images/work2(1024).webp" media="(max-width: 1430px )" type="image/webp">
+                                <source srcset="images/work2(1024).jpg" media="(max-width: 1430px )" type="image/jpg">
+                                <source srcset="images/work2.avif" media="(max-width: 3000px )" type="image/avif">
+                                <source srcset="images/work2.webp" media="(max-width: 3000px )" type="image/webp">
+                                <img class="work__img-right1" src="images/work2.jpg" alt="photo 2">
+                            </picture>
+                        </li>
+                        <li class="work__list-item">
+                            <picture class="img">
+                                <source srcset="images/work3(320).avif" media="(max-width: 767px )" type="image/avif">
+                                <source srcset="images/work3(320).webp" media="(max-width: 767px )" type="image/webp">
+                                <source srcset="images/work3(320).jpg" media="(max-width: 767px )" type="image/jpg">
+                                <source srcset="images/work3(768).avif" media="(max-width: 1023px )" type="image/avif">
+                                <source srcset="images/work3(768).webp" media="(max-width: 1023px )" type="image/webp">
+                                <source srcset="images/work3(768).jpg" media="(max-width: 1023px )" type="image/jpg">
+                                <source srcset="images/work3(1024).avif" media="(max-width: 1430px )" type="image/avif">
+                                <source srcset="images/work3(1024).webp" media="(max-width: 1430px )" type="image/webp">
+                                <source srcset="images/work3(1024).jpg" media="(max-width: 1430px )" type="image/jpg">
+                                <source srcset="images/work3.avif" media="(max-width: 3000px )" type="image/avif">
+                                <source srcset="images/work3.webp" media="(max-width: 3000px )" type="image/webp">
+                                <img class="work__img-right " src="images/work3.jpg" alt="photo 3">
+                            </picture>
+
+                        </li>
+                        <li class="work__list-item">
+                            <picture class="img">
+                                <source srcset="images/work4(320).avif" media="(max-width: 767px )" type="image/avif">
+                                <source srcset="images/work4(320).webp" media="(max-width: 767px )" type="image/webp">
+                                <source srcset="images/work4(320).jpg" media="(max-width: 767px )" type="image/jpg">
+                                <source srcset="images/work4(768).avif" media="(max-width: 1023px )" type="image/avif">
+                                <source srcset="images/work4(768).webp" media="(max-width: 1023px )" type="image/webp">
+                                <source srcset="images/work4(768).jpg" media="(max-width: 1023px )" type="image/jpg">
+                                <source srcset="images/work4(1024).avif" media="(max-width: 1430px )" type="image/avif">
+                                <source srcset="images/work4(1024).webp" media="(max-width: 1430px )" type="image/webp">
+                                <source srcset="images/work4(1024).jpg" media="(max-width: 1430px )" type="image/jpg">
+                                <source srcset="images/work4.avif" media="(max-width: 3000px )" type="image/avif">
+                                <source srcset="images/work4.webp" media="(max-width: 3000px )" type="image/webp">
+                                <img class="work__img-right" src="images/work4.jpg" alt="photo 4">
+                            </picture>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+        </section>
+        <section id="studio" class="studio">
+            <div class="container">
+                <div class="studio__content grid3">
+                    <div class="studio__left">
+                        <h2 class="studio__left-title">
+                            О&nbsp;студии
+                        </h2>
+                        <p class="studio__left-descr">
+                            В&nbsp;рамках спецификации современных стандартов, интерактивные прототипы, инициированные
+                            исключительно синтетически, ограничены исключительно образом мышления. Предварительные
+                            выводы неутешительны: высокотехнологичная концепция общественного уклада требует от&nbsp;нас
+                            анализа соответствующих условий активизации! Следует отметить, что семантический разбор
+                            внешних противодействий фиксирует необходимость распределения внутренних резервов
+                            и&nbsp;ресурсов. Безусловно, граница обучения кадров предоставляет широкие возможности для
+                            первоочередных требований. Повседневная практика показывает, что глубокий уровень погружения
+                            предполагает независимые способы реализации новых принципов формирования
+                            материально-технической и&nbsp;кадровой базы. Приятно, граждане, наблюдать, как явные
+                            признаки институционализации являются только методом политического участия
+                            и&nbsp;нарушающими общечеловеческие нормы этики.
+                        </p>
+
+                    </div>
+                    <div class="studio__right">
+                        <div class="studio__right-container">
+                            <h3 class="studio__right-title">
+                                Подписаться на&nbsp;рассылку
+                            </h3>
+
+                            <form id="form-studio" class="studio__right-img studio__right-description form" action="#">
+
+                                <label class="form__input">
+                                    <span class="container__visually"> Введите Email </span>
+                                    <input class="studio__right-input input" id="mail" name="mail" type="email"
+                                        placeholder="Email*" required autocomplete="off">
+                                </label>
+                                <div class="studio__button">
+                                    <button class="button">
+                                        Отправить
+                                    </button>
+                                </div>
+                            </form>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+        <section id="project" class="project">
+            <div class="container">
+                <h2 class="project__title">
+                    Наши проекты
+                </h2>
+                <ul class="project__list project__grid">
+                    <li class="project__list-item">
+                        <picture class="img">
+                            <source srcset="images/project1(320).avif" media="(max-width: 767px )" type="image/avif">
+                            <source srcset="images/project1(320).webp" media="(max-width: 767px )" type="image/webp">
+                            <source srcset="images/project1(320).jpg" media="(max-width: 767px )" type="image/jpg">
+                            <source srcset="images/project1(768).avif" media="(max-width: 1023px )" type="image/avif">
+                            <source srcset="images/project1(768).webp" media="(max-width: 1023px )" type="image/webp">
+                            <source srcset="images/project1(768).jpg" media="(max-width: 1023px )" type="image/jpg">
+                            <source srcset="images/project1(1024).avif" media="(max-width: 1919px )" type="image/avif">
+                            <source srcset="images/project1(1024).webp" media="(max-width: 1919px )" type="image/webp">
+                            <source srcset="images/project1(1024).jpg" media="(max-width: 1919px )" type="image/jpg">
+                            <source srcset="images/project1.avif" media="(max-width: 3000px )" type="image/avif">
+                            <source srcset="images/project1.webp" media="(max-width: 3000px )" type="image/webp">
+                            <img class="project__img1" src="images/project1.jpg" alt="photo 1">
+                        </picture>
+                        <p class="project__item-descr">
+                            Синтетически, смешаны с&nbsp;не&nbsp;уникальными данными до&nbsp;степени...
+                        </p>
+                        <span class="project__item-data">16&nbsp;июня</span>
+                        <button class="project__link">
+                            #пейзаж
+                        </button>
+                    </li>
+                    <li class="project__list-item">
+                        <picture class="img">
+                            <source srcset="images/project2(320).avif" media="(max-width: 767px )" type="image/avif">
+                            <source srcset="images/project2(320).webp" media="(max-width: 767px )" type="image/webp">
+                            <source srcset="images/project2(320).jpg" media="(max-width: 767px )" type="image/jpg">
+                            <source srcset="images/project2(768).avif" media="(max-width: 1023px )" type="image/avif">
+                            <source srcset="images/project2(768).webp" media="(max-width: 1023px )" type="image/webp">
+                            <source srcset="images/project2(768).jpg" media="(max-width: 1023px )" type="image/jpg">
+                            <source srcset="images/project2(1024).avif" media="(max-width: 1279px )" type="image/avif">
+                            <source srcset="images/project2(1024).webp" media="(max-width: 1279px )" type="image/webp">
+                            <source srcset="images/project2(1024).jpg" media="(max-width: 1279px )" type="image/jpg">
+                            <source srcset="images/project2.avif" media="(max-width: 3000px )" type="image/avif">
+                            <source srcset="images/project2.webp" media="(max-width: 3000px )" type="image/webp">
+                            <img class="project__img2" src="images/project2.jpg" alt="photo 2">
+                        </picture>
+                        <p class="project__item-descr">
+                            В&nbsp;своём стремлении улучшить опыт мы&nbsp;упускаем, что явные...
+                        </p>
+                        <span class="project__item-data">28&nbsp;мая</span>
+                        <button class="project__link">
+                            #портрет
+                        </button>
+                    </li>
+                    <li class="project__list-item">
+                        <picture class="img">
+                            <source srcset="images/project3(320).avif" media="(max-width: 767px )" type="image/avif">
+                            <source srcset="images/project3(320).webp" media="(max-width: 767px )" type="image/webp">
+                            <source srcset="images/project3(320).jpg" media="(max-width: 767px )" type="image/jpg">
+                            <source srcset="images/project3(768).avif" media="(max-width: 1023px )" type="image/avif">
+                            <source srcset="images/project3(768).webp" media="(max-width: 1023px )" type="image/webp">
+                            <source srcset="images/project3(768).jpg" media="(max-width: 1023px )" type="image/jpg">
+                            <source srcset="images/project3(1024).avif" media="(max-width: 1430px )" type="image/avif">
+                            <source srcset="images/project3(1024).webp" media="(max-width: 1430px )" type="image/webp">
+                            <source srcset="images/project3(1024).jpg" media="(max-width: 1430px )" type="image/jpg">
+                            <source srcset="images/project3.avif" media="(max-width: 3000px )" type="image/avif">
+                            <source srcset="images/project3.webp" media="(max-width: 3000px )" type="image/webp">
+                            <img class="project__img3" src="images/project3.jpg" alt="photo 3">
+                        </picture>
+                        <p class="project__item-descr">
+                            Равным образом, высокое качество позиционных...
+                        </p>
+                        <span class="project__item-data">14&nbsp;мая</span>
+                        <button class="project__link">
+                            #предмет
+                        </button>
+                    </li>
+                    <li class="project__list-item">
+                        <picture class="img ">
+                            <source srcset="images/project4(320).avif" media="(max-width: 767px )" type="image/avif">
+                            <source srcset="images/project4(320).webp" media="(max-width: 767px )" type="image/webp">
+                            <source srcset="images/project4(320).jpg" media="(max-width: 767px )" type="image/jpg">
+                            <source srcset="images/project4(768).avif" media="(max-width: 1023px )" type="image/avif">
+                            <source srcset="images/project4(768).webp" media="(max-width: 1023px )" type="image/webp">
+                            <source srcset="images/project4(768).jpg" media="(max-width: 1023px )" type="image/jpg">
+                            <source srcset="images/project4(1024).avif" media="(max-width: 1430px )" type="image/avif">
+                            <source srcset="images/project4(1024).webp" media="(max-width: 1430px )" type="image/webp">
+                            <source srcset="images/project4(1024).jpg" media="(max-width: 1430px )" type="image/jpg">
+                            <source srcset="images/project4.avif" media="(max-width: 3000px )" type="image/avif">
+                            <source srcset="images/project4.webp" media="(max-width: 3000px )" type="image/webp">
+                            <img class="project__img4 project__img1024" src="images/project4.jpg" alt="photo 4">
+                        </picture>
+                        <div class="project__information">
+                            <span class="project__info-data project__item-data">9&nbsp;апреля</span>
+                            <h3 class="project__information-title">Cемантический разбор</h3>
+                            <p class="project__information-descr project__information-des ">В&nbsp;рамках спецификации
+                                современных стандартов,
+                                интерактивные прототипы</p>
+                            <button class="project__button ">
+                                О проекте
+                            </button>
+                        </div>
+                        <button class="project__link">
+                            #fuji
+                        </button>
+                    </li>
+                    <li class="project__list-item">
+                        <picture class="img">
+                            <source srcset="images/project5(320).avif" media="(max-width: 767px )" type="image/avif">
+                            <source srcset="images/project5(320).webp" media="(max-width: 767px )" type="image/webp">
+                            <source srcset="images/project5(320).jpg" media="(max-width: 767px )" type="image/jpg">
+                            <source srcset="images/project5(768).avif" media="(max-width: 1023px )" type="image/avif">
+                            <source srcset="images/project5(768).webp" media="(max-width: 1023px )" type="image/webp">
+                            <source srcset="images/project5(768).jpg" media="(max-width: 1023px )" type="image/jpg">
+                            <source srcset="images/project5(1024).avif" media="(max-width: 1430px )" type="image/avif">
+                            <source srcset="images/project5(1024).webp" media="(max-width: 1430px )" type="image/webp">
+                            <source srcset="images/project5(1024).jpg" media="(max-width: 1430px )" type="image/jpg">
+                            <source srcset="images/project5.avif" media="(max-width: 3000px )" type="image/avif">
+                            <source srcset="images/project5.webp" media="(max-width: 3000px )" type="image/webp">
+                            <img class="project__img5" src="images/project5.jpg" alt="photo 5">
+                        </picture>
+                        <p class="project__item-descr">
+                            Как принято считать, многие известные личности и&nbsp;по&nbsp;сей день остаются уделом
+                            либералов...
+                        </p>
+                        <span class="project__item-data">9&nbsp;марта</span>
+                        <button class="project__link">
+                            #ретушь
+                        </button>
+
+                    </li>
+                    <li class="project__list-item">
+                        <picture class="img">
+                            <source srcset="images/project6(320).avif" media="(max-width: 767px )" type="image/avif">
+                            <source srcset="images/project6(320).webp" media="(max-width: 767px )" type="image/webp">
+                            <source srcset="images/project6(320).jpg" media="(max-width: 767px )" type="image/jpg">
+                            <source srcset="images/project6(768).avif" media="(max-width: 1023px )" type="image/avif">
+                            <source srcset="images/project6(768).webp" media="(max-width: 1023px )" type="image/webp">
+                            <source srcset="images/project6(768).jpg" media="(max-width: 1023px )" type="image/jpg">
+                            <source srcset="images/project6(1024).avif" media="(max-width: 1430px )" type="image/avif">
+                            <source srcset="images/project6(1024).webp" media="(max-width: 1430px )" type="image/webp">
+                            <source srcset="images/project6(1024).jpg" media="(max-width: 1430px )" type="image/jpg">
+                            <source srcset="images/project6.avif" media="(max-width: 3000px )" type="image/avif">
+                            <source srcset="images/project6.webp" media="(max-width: 3000px )" type="image/webp">
+                            <img class="project__img6 project__img11024" src="images/project6.jpg" alt="photo 6">
+                        </picture>
+                        <p class="project__item-descr">
+                            С&nbsp;учётом сложившейся международной обстановки, новая модель организационной...
+                        </p>
+                        <span class="project__item-data">1&nbsp;марта</span>
+                        <button class="project__link">
+                            #портрет
+                        </button>
+
+
+                    </li>
+                    <li class="project__list-item">
+                        <picture class="img">
+                            <source srcset="images/project7(320).avif" media="(max-width: 767px )" type="image/avif">
+                            <source srcset="images/project7(320).webp" media="(max-width: 767px )" type="image/webp">
+                            <source srcset="images/project7(320).jpg" media="(max-width: 767px )" type="image/jpg">
+                            <source srcset="images/project7(768).avif" media="(max-width: 1023px )" type="image/avif">
+                            <source srcset="images/project7(768).webp" media="(max-width: 1023px )" type="image/webp">
+                            <source srcset="images/project7(768).jpg" media="(max-width: 1023px )" type="image/jpg">
+                            <source srcset="images/project7(1024).avif" media="(max-width: 1430px )" type="image/avif">
+                            <source srcset="images/project7(1024).webp" media="(max-width: 1430px )" type="image/webp">
+                            <source srcset="images/project7(1024).jpg" media="(max-width: 1430px )" type="image/jpg">
+                            <source srcset="images/project7.avif" media="(max-width: 3000px )" type="image/avif">
+                            <source srcset="images/project7.webp" media="(max-width: 3000px )" type="image/webp">
+                            <img class="project__img7" src="images/project7.jpg" alt="photo 7">
+                        </picture>
+                        <div class="project__information">
+                            <span class="project__info-data project__item-data">20&nbsp;марта</span>
+                            <h3 class="project__information-title">Забвение</h3>
+                            <p class="project__information-descr">Играет важную роль в&nbsp;формировании
+                                глубокомысленных рассуждений</p>
+                            <button class="project__button">
+                                О проекте
+                            </button>
+                        </div>
+                        <button class="project__link">
+                            #проектзабвение
+                        </button>
+
+
+                    </li>
+                </ul>
+
+            </div>
+
+        </section>
+        <section id="contacts" class="contacts">
+            <div class="container contacts__container">
+
+                <div class="contacts__map grid4">
+                    <div class="contacts__map-left">
+                        <h2 class="contacts__title">
+                            Контакты
+                        </h2>
+                        <div class="contacts__map-img" id="map">
+
+                        </div>
+                        <div class="contacts__blog">
+                            <div class="contacts__blog-data">
+                                <h2 class="contacts__blog-data-title">
+                                    Студия &laquo;High pass&raquo;
+                                </h2>
+                                <address class="contacts__blog-data-address">
+                                    107045, Москва, Даев переулок, дом&nbsp;41, бизнес-центр &laquo;Даев Плаза&raquo;,
+                                    этаж&nbsp;8, офис &#8470;&nbsp;82
+                                </address>
+                                <a class="contacts__blog-data-tel" href="tel:+749542423532"><svg width="18" height="18"
+                                        fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M16.343 12.098a10.49 10.49 0 01-3.236-.513.896.896 0 00-.926.22l-1.44 1.806c-2.593-1.238-5.023-3.575-6.315-6.261l1.787-1.522a.935.935 0 00.22-.935 10.223 10.223 0 01-.513-3.236.916.916 0 00-.907-.907H1.84C1.346.75.75.97.75 1.657c0 8.516 7.086 15.593 15.593 15.593.65 0 .907-.578.907-1.082v-3.162a.916.916 0 00-.907-.908z"
+                                            fill="#FF6E30" /></svg><span>+7 495 424-23-532</span></a>
+                            </div>
+                            <button class="contacts__blog-closed">
+                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <circle cx="10" cy="10" r="10" fill="#999999" />
+                                    <rect x="6.20715" y="5.5" width="12" height="1" transform="rotate(45 6.20715 5.5)"
+                                        fill="white" />
+                                    <rect x="5.59143" y="13.9854" width="12" height="1"
+                                        transform="rotate(-45 5.59143 13.9854)" fill="white" />
+                                </svg>
+
+
+                              </button>
+                        </div>
+                    </div>
+                    <div class="contacts__map-right">
+                        <h3 class="contacts__form-title">Оставить заявку</h3>
+                        <p class="contacts__form-descr">Оставьте ваши данные, указав в&nbsp;графе
+                            &laquo;Комментарий&raquo; желаемые время и&nbsp;дату съёмки или другого мероприятия
+                        </p>
+                        <form id="form-contacts" class="contacts__form form" action="#">
+                            <label class="form__input">
+                                <span class="container__visually"> Введите имя </span>
+                                <input class="contacts__input input" id="name" name="name" type="text"
+                                    placeholder="Имя*" required autocomplete="off">
+                            </label>
+                            <label class="form__input">
+                                <span class="container__visually"> Введите Email </span>
+                                <input class="contacts__input input" id="email" type="email" name="email"
+                                    placeholder="Email*" required autocomplete="off">
+                            </label>
+                            <label>
+                                <span class="container__visually"> Введите сообщение </span>
+                                <textarea class="contacts__input input contacts__input-textarea"
+                                    placeholder="Комментарий" required autocomplete="off"></textarea>
+                            </label>
+
+                            <div>
+                              <button type="submit" class="button">Отправить</button>
+                          </div>
+                        </form>
+
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+    </main>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__inner">
+                <div class="footer__left">
+                    <a href="" class="footer__logo">
+                        <img src="images/Logo.png" alt="">
+                    </a>
+                    <span class="footer__information">
+                        Фотостудия High pass<sup class="reg">&reg;</sup> 2018&ndash;2020
+                    </span>
+                </div>
+                <div class="footer__right">
+                    <p class="footer__descr">Которая из&nbsp;моих фотографий самая любимая? Та, которую я&nbsp;собираюсь
+                        снять завтра.
+                        &copy;&nbsp;Имоджен Каннингем
+                    </p>
+                    <div class="footer__social">
+                        <span class="footer__social-descr">
+                            Больше интересного:
+                        </span>
+                        <div class="footer__social-link">
+                            <a href="" class="footer__social-ok footer__link"><svg width="30" height="30"
+                                    viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <g clip-path="url(#clip0_41399_288)">
+                                        <path
+                                            d="M12.8527 9.99062C12.8527 11.2273 13.8552 12.2299 15.0919 12.2299C16.3286 12.2299 17.3311 11.2273 17.3311 9.99062C17.3311 8.75396 16.3286 7.7514 15.0919 7.7514C13.8552 7.7514 12.8527 8.75396 12.8527 9.99062Z"
+                                            fill="#CACACA" />
+                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                            d="M15 30C23.2843 30 30 23.2843 30 15C30 6.71573 23.2843 0 15 0C6.71572 0 0 6.71573 0 15C0 23.2843 6.71572 30 15 30ZM9.67501 9.99055C9.67501 6.99892 12.1002 4.57364 15.0919 4.57364C18.0836 4.57364 20.5088 6.99892 20.5088 9.99055C20.5088 12.9822 18.0836 15.4077 15.0919 15.4077C12.1002 15.4077 9.67501 12.9822 9.67501 9.99055ZM20.5412 18.194C20.4724 18.2491 19.1729 19.2761 17.0043 19.7179L20.2777 22.9622C20.8534 23.5369 20.854 24.4695 20.2793 25.0451C19.7046 25.6207 18.7722 25.6216 18.1964 25.0467L15.0184 21.952L12.1319 25.0268C11.8429 25.3266 11.4575 25.4774 11.0716 25.4774C10.7035 25.4774 10.3351 25.3404 10.0493 25.0648C9.46372 24.5001 9.44677 23.5677 10.0114 22.9822L13.1185 19.735C10.8891 19.3036 9.53591 18.2499 9.46622 18.194C8.83165 17.6851 8.72971 16.7581 9.23862 16.1235C9.74746 15.4889 10.6744 15.387 11.3091 15.8958C11.3225 15.9067 12.7378 16.9699 15.0183 16.9715C17.2989 16.9699 18.6849 15.9067 18.6983 15.8958C19.333 15.387 20.2599 15.4889 20.7688 16.1235C21.2777 16.7581 21.1757 17.6851 20.5412 18.194Z"
+                                            fill="#CACACA" />
+                                    </g>
+                                    <defs>
+                                        <clipPath id="clip0_41399_288">
+                                            <rect width="30" height="30" fill="white"
+                                                transform="matrix(-1 0 0 1 30 0)" />
+                                        </clipPath>
+                                    </defs>
+                                </svg>
+
+                            </a>
+                            <a href="" class="footer__social-vk footer__link"><svg width="30" height="30"
+                                    viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M15 0C6.71601 0 0 6.7157 0 15C0 23.2843 6.71601 30 15 30C23.284 30 30 23.2843 30 15C30 6.7157 23.284 0 15 0ZM22.6088 16.6223C23.3079 17.3052 24.0476 17.9478 24.6752 18.7013C24.9533 19.0346 25.2154 19.3792 25.4148 19.7669C25.6996 20.3196 25.4425 20.9257 24.9477 20.9586L21.8747 20.958C21.081 21.0236 20.4494 20.7035 19.9169 20.1609C19.4919 19.7285 19.0975 19.2666 18.6881 18.8194C18.5208 18.6359 18.3447 18.4631 18.1347 18.3272C17.7158 18.0546 17.3518 18.1381 17.1118 18.5758C16.8672 19.0211 16.8114 19.5146 16.788 20.0102C16.7546 20.7348 16.5361 20.9242 15.809 20.9583C14.2555 21.031 12.7814 20.7953 11.4114 20.0121C10.2028 19.3212 9.26732 18.3462 8.45218 17.2423C6.86486 15.0902 5.64921 12.7283 4.55693 10.2985C4.3111 9.7513 4.49095 9.45852 5.09463 9.44716C6.0976 9.42783 7.10056 9.43028 8.10353 9.44624C8.51172 9.45268 8.78179 9.68624 8.93862 10.0714C9.48062 11.4049 10.1451 12.6737 10.9777 13.8503C11.1996 14.1637 11.4261 14.4761 11.7486 14.6974C12.1047 14.9417 12.376 14.861 12.5438 14.4635C12.6513 14.2109 12.6976 13.9409 12.7209 13.6702C12.8007 12.743 12.8102 11.8162 12.6721 10.8927C12.5862 10.3148 12.2612 9.94158 11.6851 9.83233C11.3917 9.77678 11.4347 9.66813 11.5774 9.50056C11.8251 9.21084 12.0571 9.03161 12.5208 9.03161L15.9928 9.031C16.5401 9.13841 16.6628 9.38394 16.7371 9.93514L16.7402 13.7936C16.7337 14.0069 16.8473 14.6391 17.2303 14.7787C17.5372 14.88 17.7398 14.6339 17.9233 14.4396C18.7559 13.556 19.3492 12.5131 19.8804 11.4338C20.1149 10.9577 20.3171 10.4652 20.5136 9.97166C20.6596 9.60675 20.8868 9.42721 21.2986 9.43335L24.6421 9.43734C24.7406 9.43734 24.8406 9.43826 24.9382 9.45514C25.5017 9.55151 25.6561 9.79396 25.4817 10.3436C25.2074 11.2073 24.6743 11.9266 24.1532 12.6479C23.5946 13.4201 22.9989 14.1652 22.4458 14.9408C21.9376 15.6497 21.9778 16.0066 22.6088 16.6223Z"
+                                        fill="#CACACA" />
+                                </svg>
+
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </footer>
+
+</body>
+
+</html>
